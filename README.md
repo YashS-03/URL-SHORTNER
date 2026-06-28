@@ -6,3 +6,4 @@ Work in progress. Currently Phase 4 - Flask Web Server
 Added Flask routes:
 - POST /shorten — accepts a long URL, returns a short code
 - GET /<short_code> — redirects to the original URL
+Fixed url_shortner.py import issue with __main__ gaurd
