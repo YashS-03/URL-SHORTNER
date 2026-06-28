@@ -12,8 +12,7 @@ def shorten(long_url):
     save_url(long_url, short_code)
     return short_code
 
-url = input("Enter URL: ")
-
-code = shorten(url)
-
-print("Short URL Code:", code)
+if __name__ == "__main__":
+    url = input("Enter URL : ")
+    code = shorten(url)
+    print("Short URL Code")
