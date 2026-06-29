@@ -7,3 +7,5 @@ Added Flask routes:
 - POST /shorten — accepts a long URL, returns a short code
 - GET /<short_code> — redirects to the original URL
 Fixed url_shortner.py import issue with __main__ gaurd
+Implemented Flask API endpoints for URL shortening and redirection
+Added SQLite-based storage with click tracking for each shortened URL
