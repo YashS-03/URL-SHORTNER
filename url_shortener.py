@@ -15,4 +15,4 @@ def shorten(long_url):
 if __name__ == "__main__":
     url = input("Enter URL : ")
     code = shorten(url)
-    print("Short URL Code")
+    print("Short URL Code:" ,code)
