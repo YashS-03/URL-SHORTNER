@@ -8,6 +8,10 @@ app = Flask(__name__)
 def shorten_url():
     data = request.json
     long_url = data["url"]
+   
+    if not long_url.startswith(("http://", "https://")):
+        return jsonify({"error": "Invalid URL"}), 400
+
     short_code = shorten(long_url)
     return jsonify({"short_code": short_code})
 
