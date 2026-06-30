@@ -34,3 +34,22 @@ def get_url(short_code):
     conn.close()
     return result
 
+def increment_clicks(short_code):
+    conn = sqlite3.connect("urls.db")
+    cur = conn.cursor()
+    
+    cur.execute(
+        "UPDATE urls SET clicks = clicks + 1 WHERE short_code = ?", (short_code,)
+    )
+    conn.commit()
+    conn.close()
+    
+def get_all_urls():
+    conn = sqlite3.connect("urls.db")
+    cur = conn.cursor()
+    
+    cur.execute("SELECT * FROM urls")
+    rows = cur.fetchall()
+    
+    conn.close()
+    return rows
