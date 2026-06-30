@@ -10,3 +10,4 @@ Fixed url_shortner.py import issue with __main__ gaurd
 Implemented Flask API endpoints for URL shortening and redirection
 Added SQLite-based storage with click tracking for each shortened URL
 Added click tracking to count and store the number of visits for each shortened URL.
+Added URL Validation and Security Checks.
